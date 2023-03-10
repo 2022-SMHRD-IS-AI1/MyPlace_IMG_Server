@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 public class TestServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		// ㅇㅇ
 		final String IMAGE = "img/_126241775_getty_cats.jpg";
 	
 		PrintWriter out = response.getWriter();
