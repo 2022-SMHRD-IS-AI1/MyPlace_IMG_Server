@@ -21,7 +21,7 @@ public class TestServlet extends HttpServlet {
 		
 		out.print("<h1>배포 테스트하기</h1>");
 	
-		out.print("<a");
+		out.print("<a ");
 		out.print("href='" + IMAGE +"'");
 		out.print(">");
 		
