@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
-@MultipartConfig(location = "/home/ubuntu/web/apache-tomcat-9.0.73/work/Catalina/localhost/MyPlace_Image/Img")
+//@MultipartConfig(location = "/home/ubuntu/web/apache-tomcat-9.0.73/work/Catalina/localhost/MyPlace_Image/Img")
 @WebServlet("/FileUpload")
 public class FileUpload extends HttpServlet {
 	private static final long serialVersionUID = 1L;
