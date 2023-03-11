@@ -14,6 +14,11 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
 //@MultipartConfig(location = "/home/ubuntu/web/apache-tomcat-9.0.73/work/Catalina/localhost/MyPlace_Image/Img")
+@MultipartConfig(
+        location = "/home/ubuntu/web/apache-tomcat-9.0.73/work/Catalina/localhost/MyPlace_Image/Img",
+        maxFileSize = -1,
+        maxRequestSize = -1,
+        fileSizeThreshold = 1024)
 @WebServlet("/FileUpload")
 public class FileUpload extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -22,13 +27,12 @@ public class FileUpload extends HttpServlet {
 		response.setHeader("Access-Control-Allow-Origin", "*");
 		// file 받아오기
 		
-		String contentType = request.getContentType();
 		Part file = request.getPart("myFileInput");
+		String contentType = request.getContentType();
 		InputStream fileContent = file.getInputStream();
 		PrintWriter out = response.getWriter();
 		
         if (contentType != null &&  contentType.toLowerCase().startsWith("multipart/")) {
-            // getParts()를 통해 Body에 넘어온 데이터들을 각각의  Part로 쪼개어 리턴
         	System.out.printf("파라미터 명 : %s, contentType :  %s,  size : %d bytes \n", file.getName(),
         			file.getContentType(), file.getSize());
  
