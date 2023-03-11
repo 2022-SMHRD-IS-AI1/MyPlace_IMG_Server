@@ -13,11 +13,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
-@MultipartConfig(location = "MyPlace_Image/img")
+@MultipartConfig(location = "/home/ubuntu/web/apache-tomcat-9.0.73/work/Catalina/localhost/MyPlace_Image/Img")
 @WebServlet("/FileUpload")
 public class FileUpload extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static final String ATTACHES_DIR = "MyPlace_Image/img";
+	private static final String ATTACHES_DIR = "/home/ubuntu/web/apache-tomcat-9.0.73/work/Catalina/localhost/MyPlace_Image/Img";
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setHeader("Access-Control-Allow-Origin", "*");
 		// file 받아오기
