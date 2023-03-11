@@ -42,7 +42,7 @@ public class FileUpload extends HttpServlet {
 		// file의 이름을 꺼냈을 때 저장
 		String fileName = multi.getFilesystemName("myFileInput");
 	
-	
+		
 	
 		// 비동기 통신 응답
 		response.setCharacterEncoding("UTF-8");
@@ -50,7 +50,7 @@ public class FileUpload extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		
 		
-		out.print(fileName);
+		out.print("img/" + fileName);
 		
 	
 	
