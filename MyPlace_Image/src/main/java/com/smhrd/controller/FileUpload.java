@@ -17,6 +17,8 @@ public class FileUpload extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
+		response.setHeader("Access-Control-Allow-Origin", "*");
+		
 		// 1. 어디에?
 		String savePath = request.getServletContext().getRealPath("img");
 		
