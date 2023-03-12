@@ -19,7 +19,7 @@ public class FileUpload extends HttpServlet {
 	
 		response.setHeader("Access-Control-Allow-Origin", "*");
 		
-		// 1. 어디에?
+		// 1. 어디에? path
 		String savePath = request.getServletContext().getRealPath("img");
 		
 		// 2. file 최대 용량
