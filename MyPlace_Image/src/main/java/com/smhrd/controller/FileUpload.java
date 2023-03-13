@@ -50,7 +50,7 @@ public class FileUpload extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		//
 		
-		out.print("img/" + fileName);
+		out.print("img/" + fileName); 
 		
 	
 	
